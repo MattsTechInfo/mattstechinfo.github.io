@@ -1,46 +1,15 @@
-# Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+# MattsTechInfo.github.io
+Welcome to the GitHub repo for the [mattstech.info](https://mattstech.info) website hosted by GitHub pages.
+The whole setup has been open-sourced so you can have a look around, see how I've built things and how you can replicate it. You are free to copy work or even duplicate all content for your own safekeeping.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `_includes`, `_layout`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
+## Jekyll based
+This website is based on Jekyll and uses markdown to generate static HTML pages without any form of back-end. Essentially Jekyll is the bare-bones engine where normally I would use (for example) Wordpress. The reason I've switched to using Jekyll with GitHub Pages is the simplicity, open-source nature and speed. For more information please see the Jekyll foundation documentation [Jekyll Docs](https://jekyllrb.com/docs/installation/) on how to run your own installation.
 
-The Jekyll organization claims that this is to leave the ball in the user’s court, but this also results in users not being able to enjoy the out-of-the-box experience when using feature-rich themes.
-
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your Jekyll site. The following is a list of targets:
-
-```shell
-.
-├── _config.yml
-├── _data
-├── _plugins
-├── _tabs
-└── index.html
-```
-
-In order to save your time, and to prevent you from missing some files when copying, we extract those files/configurations of the latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
-
-## Prerequisites
-
-Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll` and `Bundler`.
-
-## Installation
-
-[**Use this template**][use-template] to generate a brand new repository and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
-
-Then clone it to your local machine and run:
-
-```
-$ bundle
-```
-
-## Usage
-
-Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+## Chirpy theme
+As you can see on the top left of this repository, this has all been generated from an awesome project by cotes2020. Which doesn't just generate all the code using Jekyll, it's a fully fledged theme with additional functionality. The theme fits my purposes and cotes2020 made it extremely easy to get started for yourself. If you want to give it a try, please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation) or jump right in and generate your own Jekyll site with the Chirpy theme with a few simple steps [chirpy-starter](https://github.com/cotes2020/chirpy-starter/generate).
+themes.
 
 ## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+This theme (Chirpy) and work by cotes2020 is published under the [MIT](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE) License.
+All additions and alterations to the code by me (Matts Bos) for Jekyll functionality are published under the [MIT](https://github.com/MattsTechInfo/mattstechinfo.github.io/blob/master/LICENSE) License.
+All written content in/on blog posts, tutorials and pages (found in files ending with .md) by me (Matts Bos) are published under the [Creative Commons Attrubution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) License.
