@@ -1,0 +1,52 @@
+---
+layout: page-notag
+# The Projects page layout
+---
+
+{% include lang.html %}
+
+{{ content }}
+
+<div id="post-list">
+
+{% for project in site.projects %}
+
+  <div class="post-preview">
+    <h1>
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        {% include no-linenos.html content=project.content %}
+        {{ content | markdownify | strip_html | truncate: 200 | escape }}
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        {% include datetime.html date=project.date %}
+
+        <!-- updated date -->
+        <i class="fas fa-pen fa-fw"></i>
+        Updated: {% include datetime.html date=project.updated %}
+
+      </div>
+
+      {% if project.pin %}
+      <div class="pin">
+        <i class="fas fa-thumbtack fa-fw"></i>
+        <span>{{ site.data.locales[lang].project.pin_prompt }}</span>
+      </div>
+      {% endif %}
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+{% endfor %}
+
+</div> <!-- #post-list -->

@@ -3,6 +3,8 @@ title: Upcoming public talk @NLVMUG
 date: 2019-03-12 12:51:41 +01:00
 category: [Public-speaking]
 tags: [public-speaking,nlvmug,vmware,nsx]
+image:
+  path: /assets/img/posts/headers/vmug2019.jpg
 ---
 
 ## NLVMUG

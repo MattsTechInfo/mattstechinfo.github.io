@@ -10,7 +10,8 @@ layout:
 # The tabs of sidebar
 tabs:
   # format: <filename_without_extension>: <value>
-  home: Home
+  home: Blog
+  projects: Projects
   categories: Categories
   tags: Tags
   archives: Archives
@@ -52,6 +53,28 @@ notification:
 # ----- Posts related labels -----
 
 post:
+  written_by: By
+  posted: Posted
+  updated: Updated
+  words: words
+  pageview_measure: views
+  read_time:
+    unit: min
+    prompt: read
+  relate_posts: Further Reading
+  share: Share
+  button:
+    next: Newer
+    previous: Older
+    copy_code:
+      succeed: Copied!
+    share_link:
+      title: Copy link
+      succeed: Link copied successfully!
+  # pinned prompt of posts list on homepage
+  pin_prompt: Pinned
+
+project:
   written_by: By
   posted: Posted
   updated: Updated

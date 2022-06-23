@@ -3,6 +3,8 @@ title: VMware Tech Summit 2018
 date: 2018-05-24 21:30:10 +01:00
 category: [Events,VMware]
 tags: [vmware,events,tech-summit]
+image:
+  path: /assets/img/posts/headers/techsummit2018.jpg
 ---
 
 The past two days I was in Cork, Ireland together with two of my colleagues to attend the VMware Tech Summit 2018! Part of a small group of EMEA VMware partners we got a lot of quality technical information from the GSS team! The event was two days long and consisted of mostly a morning and an afternoon planning for each day.

@@ -3,6 +3,8 @@ title: New vExpert
 date: 2019-09-01 10:17:00 +01:00
 category: [Personal,Certification]
 tags: [certification,vmware,vexpert]
+image:
+  path: /assets/img/posts/headers/vexpert2019.jpg
 ---
 
 This is a short update and notification. After I got back from my holiday I was greeted by a nice e-mail from the VMware vExpert team:

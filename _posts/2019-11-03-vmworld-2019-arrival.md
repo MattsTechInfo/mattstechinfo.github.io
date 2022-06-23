@@ -3,6 +3,8 @@ title: VMworld 2019 – Arrival
 date: 2019-11-03 23:20:45 +01:00
 category: [Events,VMware]
 tags: [vmware,events,vmworld]
+image:
+  path: /assets/img/posts/headers/vmworld2019-arrival.jpg
 ---
 
 VMworld 2019 in Barcelona will kick off tomorrow morning, time to go through some quick facts and what to expect the coming week.

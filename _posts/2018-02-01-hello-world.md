@@ -3,6 +3,8 @@ title: Hello World
 date: 2018-02-01 15:31:00 +01:00
 category: [General,Blog]
 tags: [blog,welcome]
+image:
+  path: /assets/img/posts/headers/hello-world.jpg
 ---
 
 Welcome to the platform, I’m Matts. On this platform I will send updates for the world to see, or maybe realistically, just a few other interested persons working with VMware products and other tech.

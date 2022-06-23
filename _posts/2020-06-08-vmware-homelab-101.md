@@ -3,6 +3,8 @@ title: VMware Homelab 101
 date: 2020-06-08 22:17:01 +01:00
 category: [Documentation,Tutorials]
 tags: [documentation,homelab,vmware,esxi,vsphere7,tutorial]
+image:
+  path: /assets/img/posts/headers/homelab-2019.jpg
 ---
 
 > Although the resource figures and versions mentioned in this tutorial are outdated, the rest of the information is still true today.
@@ -14,7 +16,7 @@ The first thing that comes to mind is setting up everything at your home, invest
 Please note this tutorial is aimed at building your own environment at work or at home. 
 
 ## VMware Hands-On-Labs 
-Although actively promoted throughout the community, there are still a lot of people that don’t know about the Hands-On-Labs sponsored by VMware. These labs are online environments for only you to work in, they are accompanied by instructions and function as great tutorials. Even if you have your own lab, it’s still great to use every now and then. Best of all, it’s free to use after creating a, free, account! Visit the website: https://hol.vmware.com or jump right into the catalog: https://labs.hol.vmware.com 
+Although actively promoted throughout the community, there are still a lot of people that don’t know about the Hands-On-Labs sponsored by VMware. These labs are online environments for only you to work in, they are accompanied by instructions and function as great tutorials. Even if you have your own lab, it’s still great to use every now and then. Best of all, it’s free to use after creating a, free, account! Visit the website: [https://hol.vmware.com ⧉](https://hol.vmware.com) or jump right into the catalog: [https://labs.hol.vmware.com ⧉](https://labs.hol.vmware.com)
 
 ## Preparations 
 ### Goal 
@@ -79,7 +81,7 @@ Grand total of hardware needed on the physical server:
 - Storage: 430GB storage (Make it 500 to have some workload space) 
 
 ## Design 
-![design example](https://mattsbos.pro/wp-content/uploads/2020/04/image-768x663.png){: width="768" height="663" style="max-width: 500px" .right}
+![design example](/assets/img/posts/vmware-homelab-101/image.png){: width="768" height="663" style="max-width: 500px" .right}
 Now that you know what you can do with your hardware and chose what you want to build, it’s time to set up a small design before you start installing. Doing this up front will make the process a lot less complicated and you will avoid running into errors or losing track of what is where. 
 To make it easy, name every object in the design ranging from VLAN’s used to host and cluster names. 
 I’ve made an example design based on the example above except I used VIC instead of PKS since I need a VIC environment for some testing. I also supersized it quite a bit because it’s likely I will install VMware PKS later, planning! 
@@ -112,8 +114,8 @@ If you want to run nested ESXi cluster like in my example, now is the time to ad
 
 For __nested__ ESXi hosts to use an uplink from a physical ESXi host there are a few very important settings, without these the nested ESXi host will not communicate. You can find these in the advanced settings of your trunked portgroup.
 
-![Security settings ESXi](https://mattsbos.pro/wp-content/uploads/2020/04/image-2.png){: .normal}
-![Security settings vCenter](https://mattsbos.pro/wp-content/uploads/2020/04/image-1.png){: .normal} 
+![Security settings ESXi](/assets/img/posts/vmware-homelab-101/image-2.png){: .normal}
+![Security settings vCenter](/assets/img/posts/vmware-homelab-101/image-1.png){: .normal} 
 _ESXi view of security settings (left) and vCenter view of security settings (right)_
 
 Some explanation:
@@ -128,7 +130,7 @@ __Forged Transmits__
 : Having this on “Accept” will allow outgoing frames to the Nested ESXi to pass even though the destination MAC address differs from the Nested ESXi’s MAC address.  
 
 #### Storage 
-![Storage example](https://mattsbos.pro/wp-content/uploads/2020/04/image-4.png){: style="max-width: 350px" .right}
+![Storage example](/assets/img/posts/vmware-homelab-101/image-4.png){: style="max-width: 350px" .right}
 For storage there are multiple options. To keep it easy, to ESXi/vSphere there are two groups of storage, local and shared. Local works fine with a single server, but as soon as you start clustering you want shared storage. Shared storage is often quite expensive for a test lab to get, most home users will only have access to some non-performing consumer NAS solution. Although it can work if you don’t expect too much of it. 
 
 Local storage is what most home users have, disks present in the server/computer. Since, in the design we’re working with here, there is only one physical server running the nested environment we can turn the local storage on the physical server into shared storage by booting a VM on the physical host to serve, for example, NFS. This small trick will allow you to connect all Nested ESXi hosts to a fake shared storage solution. Just make sure the VM serving the shared storage __always__ boots before any Nested ESXi that relies on it! (Tip: use the AutoStart order)  

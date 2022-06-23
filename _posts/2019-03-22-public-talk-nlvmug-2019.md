@@ -3,13 +3,15 @@ title: Public talk @NLVMUG 2019
 date: 2019-03-22 14:12:41 +01:00
 category: [Public-speaking]
 tags: [public-speaking,nlvmug,vmware,nsx,dutch]
+image:
+  path: /assets/img/posts/headers/vmug2019-talk.jpg
 ---
 
 ## TL:DR
 Right, just here for the slides and info about the content? No problem. Note: everything is Dutch.
 
 ### Slidedeck
-[NLVMUG-Usercon-2019-NSX-V-vs-NSX-T (PDF) ⧉](https://mattsbos.pro/wp-content/uploads/2019/06/NLVMUG-Usercon-2019-NSX-V-vs-NSX-T.pdf){:target="_blank"}{:rel="noopener noreferrer"}
+[NLVMUG-Usercon-2019-NSX-V-vs-NSX-T (PDF) ⧉](assets\files\posts\public-talk-nlvmug-2019\NLVMUG-Usercon-2019-NSX-V-vs-NSX-T.pdf){:target="_blank"}{:rel="noopener noreferrer"}
 
 ### Full presentation
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=fF0x_nlGjdw

@@ -3,6 +3,8 @@ title: Public talk @Infosecurity
 date: 2018-10-22 10:20:45 +01:00
 category: [Public-speaking]
 tags: [public-speaking,vmware,nsx]
+image:
+  path: /assets/img/posts/headers/infosecurity.jpg
 ---
 
 ## Public Talk

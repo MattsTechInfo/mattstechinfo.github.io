@@ -3,6 +3,8 @@ title: Architecting on AWS
 date: 2018-06-28 18:44:40 +01:00
 category: [Personal,Learning]
 tags: [courses,aws,architecture]
+image:
+  path: /assets/img/posts/headers/architecting-aws.jpg
 ---
 
 Today I successfully passed the Architecting on AWS course!

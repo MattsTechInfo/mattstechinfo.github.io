@@ -3,6 +3,8 @@ title: TrueNAS on ESXi with local storage
 date: 2020-08-12 23:57:21 +01:00
 category: [Documentation,Tutorials]
 tags: [documentation,homelab,truenas,storage,vmware,esxi,vsphere6,vsphere7,tutorial]
+image:
+  path: /assets/img/posts/headers/truenas-on-esxi.jpg
 ---
 
 In my homelab I try to use as little electricity as possible, not just because I live in The Netherlands and electricity is expensive, mostly because the house I live in is (climate/CO2) neutral and only has 6MWh of electricity per year available from the sun. Due to this I’d rather not have multiple servers continuously running, I much rather have just one piece of hardware. Since I wanted to have a NAS too, I figured I’d try to combine both in one physical server!
@@ -30,7 +32,7 @@ As goes for any other VM, don’t give a VM more vCPU’s than it needs. The mor
 ### Memory
 Now here’s where it gets interesting. Online you will find ginormous amounts of memory to supposedly be required by ZFS. My personal favorite you find everywhere when you search for memory requirements: “Rule of thumb for TrueNAS is 1GB ECC RAM per 1TB of storage space”. Forget it, that’s bollocks!
 
-![TrueNAS memory dashboard](https://mattsbos.pro/wp-content/uploads/2020/12/memory-usage.png){: style="max-width: 500px" .right}
+![TrueNAS memory dashboard](/assets/img/posts/truenas-on-esxi-with-local-storage/memory-usage.png){: style="max-width: 500px" .right}
 First of all, what amount do you need? The developers of TrueNAS state that 8GB is the minimum and it does not have to be scaled up based on storage size. To give you an idea, I’m currently running 8GB on the VM with 46TB of raw storage spread over 7 disks. As you can see on the screenshot, 1.3GB of memory is in use by TrueNAS services, 0.2GB of memory is still available and a whopping 6GB is reserved for cache. Don’t ask me about the missing 0.5GB.
 
 Now here comes the catch, if you want to run deduplication on a few TeraBytes of data, this is where the memory requirements come in. Some calculations show that, depending on the type of data, 1TB of data could possibly use up 5GB of memory using deduplication. It can also use as little as 0.5GB though. Conclusion is, deduplication is costly and you should ask yourself if you need it.
@@ -64,12 +66,12 @@ This simple SATA controller already works as JBOD out of the box, there’s noth
 
 ### M.2 NVMe 256GB
 Just because it’s possible I’ve added the 256GB NVMe SSD to the PCI passthrough. I will try to use this in the future as a caching solution inside TrueNAS, for now I just prepare it to be used and don’t actually use it yet. Maybe more on this in a following blog post. The reason I’m not using it yet is because TrueNAS already reserves memory for caching purposes. Since the current amount of memory is sufficient for cache and way faster than NVMe I have not yet required an additional caching mechanism.
-![Storage adapter ESXi passthrough](https://mattsbos.pro/wp-content/uploads/2020/12/passthrough-1024x148.png)
+![Storage adapter ESXi passthrough](/assets/img/posts/truenas-on-esxi-with-local-storage/passthrough-1024x148.png)
 
 ### TrueNAS VM
 To start the installation of TrueNAS I created a VM with 2vCPU’s, 8GB memory and a 32GB Hard Disk. No other devices attached yet. Downloaded the latest TrueNAS version from the TrueNAS website and mounted the ISO to install the OS. Was as easy as one, two, three. Before I knew it I was browsing the web GUI. TrueNAS immediately grabs all the memory it can get, but as you can see in the screenshot about memory above, it doesn’t necessarily mean it’s not enough.
 
-![TrueNAS VM](https://mattsbos.pro/wp-content/uploads/2020/12/VM.png)
+![TrueNAS VM](/assets/img/posts/truenas-on-esxi-with-local-storage/VM.png)
 
 #### Networking
 The TrueNAS requirements also state that a minimum of one physical network port is required. This is based on a bare-metal install in a production environment. A lot of community answers tell you to dedicate a physical network port to the TrueNAS VM using passthrough. For ESXi, this is not true and really not necessary. ESXi internal network speed is way higher than your average physical network adapter. Maybe there are other hypervisors out there that might not be very efficient, having slower internal virtual networking than physical, ESXi has no such problems.
@@ -78,7 +80,7 @@ My personal setup consists of a dual VMXNET3 adapter, one is in my main VLAN whe
 
 ## Storage (physical)
 As I mentioned above, I have two deviced passed through, directly into the VM. One is the LSI 3008 SAS controller and the other is the NVMe M.2 SSD. But there was also the problem with the SATA controller not being able to be passed through, which I solved with RDM’s.
-![SAS disks overview](https://mattsbos.pro/wp-content/uploads/2020/12/memory-usage.png){: style="max-width: 300px" .right}
+![SAS disks overview](/assets/img/posts/truenas-on-esxi-with-local-storage/SAS-disks.png){: style="max-width: 300px" .right}
 
 ### SAS Controller and NVMe
 All disks attached to the LSI 3008 SAS controller are immediately visible in TrueNAS. I can see all their information and S.M.A.R.T. can be tested and read without problems. On the disk overview I see all three Seagates and the ADATA/XPG NVMe.
@@ -134,7 +136,7 @@ vmkfstools -z /vmfs/devices/disks/t10.ATA_____Samsung_SSD_860_EVO_1TB___________
 ```
 
 After running the above commands the rdm1 to rdm4 VMDK’s should be in the chosen location and are ready to be consumed by the TrueNAS VM.
-![rdm on datastore](https://mattsbos.pro/wp-content/uploads/2020/12/rdm-vmdk.png)
+![rdm on datastore](/assets/img/posts/truenas-on-esxi-with-local-storage/rdm-vmdk.png)
 
 #### Physical RDM VM configuration
 With the RDM’s created in the above step, they can now be added to the TrueNAS VM. Again, there are a few things that need to be considered:
@@ -152,7 +154,7 @@ Now edit the TrueNAS VM settings and add a new LSI Logic SAS controller if you w
   - Mode: Independent Persistent
   - (Optional) SCSI Controller: 1
 - Repeat adding Existing Hard Disk for all RDM’s.
-![Add VM hardware](https://mattsbos.pro/wp-content/uploads/2020/12/Add-existing.png)
+![Add VM hardware](/assets/img/posts/truenas-on-esxi-with-local-storage/Add-existing.png)
 
 That’s it! Now all the RDM’s are available in the correct way, without any filtering from the Hypervisor storage layer. TrueNAS will recognize the disks and will be able to do everything with them as if they were directly attached as a local disk. You can not see the difference from within TrueNAS.
 

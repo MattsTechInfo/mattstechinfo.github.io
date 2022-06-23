@@ -3,6 +3,8 @@ title: Homelab Update
 date: 2020-03-24 13:01:00 +01:00
 category: [Homelab,Servers]
 tags: [homelab,server,hardware]
+image:
+  path: /assets/img/posts/headers/homelab-update.jpg
 ---
 
 Something completely different I want to share with you. I have quite an extensive homelab and wasn’t actually in the market for a new one, however I saw a deal on eBay.
@@ -47,19 +49,19 @@ But hey, this is amazing! It’s currently sitting there running at a stunning 3
 Now I still have to finish the build completely with disks and I’m still waiting on the SAS to 4x SATA reverse cable, but so far I’m stoked and really happy I jumped on the eBay listing for this motherboard.
 
 ## Build pictures
-![Unboxed Case](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_185640-1024x768.jpg)
+![Unboxed Case](/assets/img/posts/homelab-update/IMG_20200319_185640-1024x768.jpg)
 _19 inch rack case unboxed_
-![PSU Screws](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_195227-1024x768.jpg)
+![PSU Screws](/assets/img/posts/homelab-update/IMG_20200319_195227-1024x768.jpg)
 _PSU screw holes on the left left dont align with case_
-![PSU Mount](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_200046-768x1024.jpg)
+![PSU Mount](/assets/img/posts/homelab-update/IMG_20200319_200046-768x1024.jpg)
 _PSU mount backside_
-![Motherboard in Case](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_202057-768x1024.jpg)
+![Motherboard in Case](/assets/img/posts/homelab-update/IMG_20200319_202057-768x1024.jpg)
 _Motherboard mounted in case_
-![Motherboard IO](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_202327-1024x768.jpg)
+![Motherboard IO](/assets/img/posts/homelab-update/IMG_20200319_202327-1024x768.jpg)
 _Motherboard I/O shield_
-![PSU to SAS](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200319_210735-768x1024.jpg)
+![PSU to SAS](/assets/img/posts/homelab-update/IMG_20200319_210735-768x1024.jpg)
 _Connecting PSU cables to SAS backplane_
-![Internals connected](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200320_161804-768x1024.jpg)
+![Internals connected](/assets/img/posts/homelab-update/IMG_20200320_161804-768x1024.jpg)
 _All internals connected_
-![Racked](https://mattsbos.pro/wp-content/uploads/2020/03/IMG_20200321_174904-1024x768.jpg)
+![Racked](/assets/img/posts/homelab-update/IMG_20200321_174904-1024x768.jpg)
 _Racked underneath the R720XD_

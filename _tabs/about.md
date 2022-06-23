@@ -1,14 +1,14 @@
 ---
 title: About
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
-
+![Matts](/assets/img/matts.png){: style="max-width: 250px" .right}
 ## Hi, I'm Matts!
 I’m an IT person from the Netherlands who is addicted to gaining knowledge, absorbs information like a sponge and utterly dislikes reading books. I find that almost anything I run into is interesting and love to challenge myself. Teaching others brings me satisfaction, passing on knowledge and helping others is something I’ve been doing my whole life.
 
 ### Job
-I have a full-time job as a Consultant/Architect for Infrastructure and (Private) Cloud customers, mostly centered around VMware products. I believe VMware makes great software thats very accessible to play with and I often write about how to use certain products or how to troubleshoot common or very specific errors so others can read the solution instead of spending precious time going through the whole process. For my professional side of life, have a look at my [dedicated website ⧉](https://mattsbos.pro){:target="_blank"}{:rel="noopener noreferrer"}.
+I have a full-time job as a Consultant/Architect for Infrastructure and (Private) Cloud customers, mostly centered around VMware products. I believe VMware makes great software that's very accessible to play with and I often write about how to use certain products or how to troubleshoot all kinds of errors. All so others can read the solution instead of spending precious time going through the whole process. For my professional side of life, have a look at my [dedicated website ⧉](https://mattsbos.pro){:target="_blank"}{:rel="noopener noreferrer"}.
 
 ### Hobbies
 During my free time I have a reasonably extensive home-lab to run and play with all kinds of interesting software and tools to make life easier, think about using Docker and Kubernetes, setting up home automation and running consolidated monitoring using Grafana and InfluxDB.

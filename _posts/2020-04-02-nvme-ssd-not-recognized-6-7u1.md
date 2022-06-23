@@ -3,11 +3,13 @@ title: NVMe SSD not recognized 6.7U1+
 date: 2020-04-02 21:01:00 +01:00
 category: [Documentation,Tutorials]
 tags: [documentation,homelab,storage,nvme,esxi,vsphere6.7,troubleshooting,tutorial]
+image:
+  path: /assets/img/posts/headers/nvme.jpg
 ---
 
 Since I just got myself a new server with m.2 slots available, I bought myself some cheap NVMe m.2 SSD’s. I planned one for placing some local VM’s on and get some good performance, the other was planned to be used as a caching SSD for use with FreeNAS. I was expecting to just plug them in and see them show up as disks in ESXi, create a datastore and off we go, easy right! Well… they didn’t show up.
 
-> A lot has happened since this post was written, please start from this new post before continuing to make sure you won't waste your time!
+> A lot has happened since this post was written, please start from [this](/posts/nvme-ssd-not-recognized-update) new post before continuing to make sure you won't waste your time!
 {: .prompt-info }
 
 > Please note: I am using non HCL hardware, the following is NOT supported by VMware, use at your own risk. Using HCL validated hardware will make sure you don’t have these problems.
@@ -16,11 +18,11 @@ Since I just got myself a new server with m.2 slots available, I bought myself s
 ## Identifying the problem
 Troubleshooting starts, I have to find out what exactly is going on. First of all, the first thing I noticed is that the drive actually does show up on the Storage -> Adapters list as “Non-Volatile memory controller”, which is interesting, apparently ESXi does see the drive, but it does not report any Device or usable disk space when trying to create a datastore. It does show it’s connected with the NVMe driver. Also, side-note, the SSD I’m using is an XPG Gammix S11 Pro.
 
-![Storage adapters NVMe](https://mattsbos.pro/wp-content/uploads/2020/12/NVMe-ESXi67-adapters-1024x187.png)
+![Storage adapters NVMe](/assets/img/posts/nvme-ssd-not-recognized-6-7u1/NVMe-ESXi67-adapters-1024x187.png)
 
 Troubleshooting some more on the ESXi CLI, I can successfully identify the SSD, showing it’s fully functional. I get triggered by the NVMe version, it shows `1.3`, might there be something wrong with the driver or the disk not supporting this version?
 
-![CLI response of NVMe vmhba identification](https://mattsbos.pro/wp-content/uploads/2020/12/NVMe-ESXi67-cli.png)
+![CLI response of NVMe vmhba identification](/assets/img/posts/nvme-ssd-not-recognized-6-7u1/NVMe-ESXi67-cli.png)
 
 After some more (web) searching, I figured out that NVMe 1.3 was long supported and shouldn’t be a problem. At this point I decided to install an older version of ESXi, instead of 6.7 U2, I installed 6.7 GA. To my surprise, it suddenly worked!
 
@@ -61,4 +63,4 @@ esxcli software vib install -v /tmp/VMW_bootbank_nvme_1.2.1.34-1vmw.670.0.0.8169
 ## Success!
 I can now see my NVMe drives and create a datastore.
 
-![NVMe storage drives show now](https://mattsbos.pro/wp-content/uploads/2020/12/NVMe-ESXi67-storagedevice-1024x194.png)
+![NVMe storage drives show now](/assets/img/posts/nvme-ssd-not-recognized-6-7u1/NVMe-ESXi67-storagedevice-1024x194.png)

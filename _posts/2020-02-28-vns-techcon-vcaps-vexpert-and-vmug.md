@@ -3,6 +3,8 @@ title: vNS Techcon, VCAP’s, vExpert and VMUG
 date: 2020-02-28 17:41:00 +01:00
 category: [General,Blog]
 tags: [blog,events,public-speaking,certification]
+image:
+  path: /assets/img/posts/headers/vnstechcon-vcap-vexpert-vmug.jpg
 ---
 
 It has been a while since my last blog entry, unfortunately I’ve been extremely busy for the past months without spare time for an update on the blog, time for a recap!
