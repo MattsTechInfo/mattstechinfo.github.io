@@ -13,4 +13,6 @@ This theme (Chirpy) and work by cotes2020 is published under the [MIT](https://g
 
 All additions and alterations to the code by me (Matts Bos) for Jekyll functionality are published under the [MIT](https://github.com/MattsTechInfo/mattstechinfo.github.io/blob/master/LICENSE) License.
 
-All written content in/on blog posts, tutorials and pages (found in files ending with .md) by me (Matts Bos) are published under the [Creative Commons Attrubution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) License.
+All written and graphical content in/on blog posts, tutorials and pages (found in files ending with .md) by me (Matts Bos) are published under the [Creative Commons Attrubution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) License.
+
+The Matts Tech Info name and logo's are ALL RIGHTS RESERVED. This means you are only allowed to fork this project including the name and logo's on GitHub. Any other action regarding the name and logo's is strictly forbidden.

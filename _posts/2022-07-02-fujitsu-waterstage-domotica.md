@@ -258,4 +258,4 @@ Apart from these values, you might want to start automating things through the H
 That concludes this post and guide, please feel free to send me feedback or ask any additional questions. You can contact me through the comments section, GitHub discussions or directly on GitHub. If you find any errors please open up an issue using this link [create an issue ⧉](https://github.com/MattsTechInfo/mattstechinfo.github.io/issues){:target="_blank"}{:rel="noopener noreferrer"} and I will have a look!
 If you feel you are missing parts in the guide or if you ran into problems I'm also happy to add that information.
 
-In the future I may add another guide continuing upon this one to show my full setup to get data from BSB-LAN to MQTT and from there use Node-Red to send the data to InfluxDB to finally show it all in graphs on a dashboard using Grafana. But for now, this is it.
+If you are interested in how I included the heatpump in my monitoring system, please see the following post: [Fujitsu BSB-LAN Monitoring](/posts/fujitsu-bsblan-monitoring/)
