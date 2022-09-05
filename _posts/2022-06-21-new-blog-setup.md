@@ -1,6 +1,6 @@
 ---
 title: New blog setup
-date: 2022-06-22 18:25:11 +01:00
+date: 2022-06-23 18:25:11 +01:00
 category: [General,Blog]
 tags: [blog,welcome]
 image:
