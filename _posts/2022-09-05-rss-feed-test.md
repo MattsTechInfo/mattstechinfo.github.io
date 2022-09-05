@@ -1,6 +1,6 @@
 ---
-title: New blog setup
-date: 2022-06-22 18:25:11 +01:00
+title: RSS Feed troubleshooting - please ignore
+date: 2022-09-05 16:00 +01:00
 category: [General,Blog]
 tags: [blog,welcome]
 image:
