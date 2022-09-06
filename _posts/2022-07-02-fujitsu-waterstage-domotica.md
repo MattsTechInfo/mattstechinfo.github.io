@@ -258,4 +258,4 @@ Apart from these values, you might want to start automating things through the H
 That concludes this post and guide, please feel free to send me feedback or ask any additional questions. You can contact me through the comments section, GitHub discussions or directly on GitHub. If you find any errors please open up an issue using this link [create an issue ⧉](https://github.com/MattsTechInfo/mattstechinfo.github.io/issues){:target="_blank"}{:rel="noopener noreferrer"} and I will have a look!
 If you feel you are missing parts in the guide or if you ran into problems I'm also happy to add that information.
 
-If you are interested in how I included the heatpump in my monitoring system, please see the following post: [Fujitsu BSB-LAN Monitoring](/posts/fujitsu-bsblan-monitoring/)
+If you are interested in how I included the heatpump in my monitoring system, please see the following guide: [Fujitsu BSB-LAN Monitoring](/posts/fujitsu-bsblan-monitoring/)

@@ -243,5 +243,7 @@ In the sidebar menu, hover over the + sign and click on `Import`. Copy the JSON 
 
 
 ## Conclusion
+Congratulations, you've got yourself a nice dashboard to monitor your heatpump. No more looking at the physical display in the utility room.
+
 That concludes this post and guide, please feel free to send me feedback or ask any additional questions. You can contact me through the comments section, GitHub discussions or directly on GitHub. If you find any errors please open up an issue using this link [create an issue ⧉](https://github.com/MattsTechInfo/mattstechinfo.github.io/issues){:target="_blank"}{:rel="noopener noreferrer"} and I will have a look!
 If you feel you are missing parts in the guide or if you ran into problems I'm also happy to add that information.
