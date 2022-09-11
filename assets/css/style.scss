@@ -12,3 +12,30 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 /* append your custom style below */
 
 h1, h2, h3, h4 {color: #2196f3;}
+
+
+/* Ko-Fi css */
+#kofi-wrapper {
+  border-left: 1px solid rgba(158, 158, 158, 0.17);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  transition: top 0.2s ease-in-out;
+  animation: fade-up 0.8s;
+  margin-top: -8rem;
+}
+
+.kofitext img.kofiimg {
+  animation: none !important;
+}
+.kofi-button span.kofitext {
+  color: #747474 !important;
+}
+
+.btn-container {
+  padding-bottom: 8px;
+}
+
+#toc-wrapper {
+  margin-bottom: 12rem !important;
+}

@@ -34,8 +34,11 @@ url: 'https://mattstech.info'
 github:
   username: MattsTechInfo             # change to your github username
 
-#twitter:
-#  username: twitter_username            # change to your twitter username
+twitter:
+  username: MattsTechInfo            # change to your twitter username
+
+discord:
+  invitelink: v8Bwbnb3xe
 
 social:
   # Change to your full name.
