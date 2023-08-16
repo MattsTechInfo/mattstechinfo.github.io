@@ -7,10 +7,13 @@ image:
   path: /assets/img/posts/headers/nvme.jpg
 ---
 
+> Looking for ESXi 8 instructions? Please go to [this](/posts/esxi-8-consumer-nvme-ssd-not-recognized) new post!
+{: .prompt-info }
+
 This is a quick revisit of two older posts that have been extremely popular and found by most visitors of my blog coming from all over the internet.
 
 ## VMware Flings driver
-William Lam, Wenchao Cui and Yibo Dong have bundled their strengths to develop a community driver to be used with ESXi for several NVMe drives that stopped working. You know, the ones requiring the hacks with rolling back or installing older drivers to make them work. Before you jump right in though, there are a few caveats you have to keep in mind. It will not work for everything! You can find the community driver at the [VMware Flings website ⧉](https://flings.vmware.com/community-nvme-driver-for-esx){:target="_blank"}{:rel="noopener noreferrer"}.
+William Lam, Wenchao Cui and Yibo Dong have bundled their strengths to develop a community driver to be used with ESXi for several NVMe drives that stopped working. You know, the ones requiring the hacks with rolling back or installing older drivers to make them work. Before you jump right in though, there are a few caveats you have to keep in mind. It will not work for everything! You can find the community driver at the [VMware Flings website ⧉](https://flings.vmware.com/community-nvme-driver-for-esxi){:target="_blank"}{:rel="noopener noreferrer"}.
 
 ## Your path to a working NVMe drive
 Like I said above, there are some caveats, unfortunately the community drivers don't support all known NVMe drives out there. In fact, at the time of writing this only the following NVMe drives are supported:

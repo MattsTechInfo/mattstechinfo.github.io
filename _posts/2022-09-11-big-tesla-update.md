@@ -1,7 +1,7 @@
 ---
 title: Big update for older Tesla's just dropped! (2022.8.10.5)
 date: 2022-09-11 16:14 +01:00
-category: [electric-vehicles]
+category: [Electric-vehicles]
 tags: [sustainable-housing,energy,electric-vehicles,tesla,home-automation]
 image:
   path: /assets/img/posts/headers/tesla.png
